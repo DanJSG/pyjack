@@ -11,6 +11,8 @@ class Deck:
 
     def draw_card(self):
         self.size -= 1
+        if self.size < 1:
+            raise Exception()
         return self.cards.pop()
 
     def _generate(self):
